@@ -1,0 +1,12 @@
+<div class="products-list-container">
+  <app-section-header [title]="'Gry'"></app-section-header>
+  <div class="game-list-wrapper">
+    <div class="header">
+      <div></div>
+      <div>Nazwa</div>
+      <div>Cena</div>
+      <div></div>
+    </div>
+    <app-product-list-item *ngFor="let item of productList" [game]="item" (clickEvent)="addGame(item)" [showButton]="findGameInBasket(item) < 0 "></app-product-list-item>
+  </div>
+</div>

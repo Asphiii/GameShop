@@ -1,0 +1,14 @@
+<div class="game-row">
+  <div class="image" [style.backgroundImage]="'url(' + game.image + ')'"></div>
+  <div class="title">
+    <h3>{{game.title}}</h3>
+    <p>Gatunek:
+      <span *ngFor="let type of game.gameType">{{type}} </span>
+    </p>
+  </div>
+  <div class="price">Cena: <span>{{game.price ? game.price + 'zł' : 'bezpłatna' }}</span>
+  </div>
+  <div class="button" *ngIf="showButton">
+    <button (click)="emitEvent()">{{buttonText}}</button>
+  </div>
+</div>

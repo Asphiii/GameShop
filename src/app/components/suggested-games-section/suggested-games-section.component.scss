@@ -1,0 +1,15 @@
+.suggested-games-section-container {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  app-game-block {
+    margin-top: 40px;
+  }
+}

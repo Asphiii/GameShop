@@ -1,0 +1,38 @@
+<div class="basket-container">
+  <app-section-header [title]="'Twój koszyk'"></app-section-header>
+  <div class="product-list">
+    <div class="header">
+      <div></div>
+      <div>Nazwa</div>
+      <div>Cena</div>
+      <div></div>
+    </div>
+    <app-product-list-item *ngFor="let item of productList" [game]="item" [showButton]="true" [buttonText]="'Usuń'" (clickEvent)="deleteElement(item)"></app-product-list-item>
+    <div class="footer">
+      <div></div>
+      <div></div>
+      <div>Razem:</div>
+      <div>
+        <span>{{price}}</span>zł
+      </div>
+    </div>
+  </div>
+  <app-section-header [title]="'Adres dostawy'"></app-section-header>
+  <div class="delivery">
+    <div class="delivery-address">
+      <div class="form" [formGroup]="formGroup">
+        <label>Imię i Nazwisko</label>
+        <input formControlName="name" [ngClass]="{'input-invalid': name.invalid && name.touched}">
+        <label>Ulica, Numer domu</label>
+        <input formControlName="street" [ngClass]="{'input-invalid': street.invalid && street.touched}">
+        <label>Miejscowość, Kod pocztowy</label>
+        <input formControlName="city" [ngClass]="{'input-invalid': city.invalid && city.touched}">
+        <label>E-mail</label>
+        <input formControlName="email" [ngClass]="{'input-invalid': email.invalid && email.touched}">
+      </div>
+    </div>
+    <div class="other">
+      <button (click)="submit()">Zamawiam</button>
+    </div>
+  </div>
+</div>

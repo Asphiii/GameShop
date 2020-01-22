@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  padding: 40px 20px 50px;
+  margin: 0;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+a, p, label {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  ul {
+    padding-right: 40px;
+
+    li {
+      list-style-type: none;
+      height: 40px;
+    }
+  }
+
+}

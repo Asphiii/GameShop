@@ -1,0 +1,67 @@
+.app-container {
+  display: flex;
+
+  .menu {
+    ul {
+      svg {
+        fill: lightgray;
+        width: 35px;
+        height: 35px;
+        margin-right: 14px;
+      }
+
+      li:first-of-type {
+        display: flex;
+        align-items: center;
+
+        .capital-letter {
+          font-size: 44px;
+        }
+
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        .text-red {
+          color: #e45252;
+        }
+      }
+
+      li:not(:first-of-type) {
+        height: 40px;
+        cursor: pointer;
+
+        &:hover {
+          font-size: 16px;
+
+          svg {
+            fill: white;
+          }
+        }
+      }
+
+      li {
+        display: block;
+        font-size: 15px;
+        margin-top: 20px;
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .menu, .game-boxes {
+    max-width: 300px;
+    min-width: 240px;
+    width: 20%;
+  }
+  .content {
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+    padding: 0 60px 0 0;
+  }
+}

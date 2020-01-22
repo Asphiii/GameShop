@@ -1,0 +1,18 @@
+.game-block {
+  width: 100%;
+  min-width: 100px;
+  height: 100%;
+
+  .picture {
+    height: 170px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: normal;
+  }
+}
