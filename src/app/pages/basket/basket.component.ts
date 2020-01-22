@@ -90,7 +90,7 @@ export class BasketComponent implements OnInit {
 
   deleteElement(game: ProductListItem) {
     const index = this.productList.findIndex(x => x.title === game.title);
-    if (index) {
+    if (index >= 0) {
       this.dataHandler.deleteProduct(this.productList[index]);
       this.getProducts();
     }
